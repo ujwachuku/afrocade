@@ -9,13 +9,32 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $categories = Category::orderBy('name', 'desc')->get();
 
-        $articles = Post::where('status', 'published')->latest()->paginate(15);
+        if ($request->has('q')) 
+        {
+            $search = true;
 
-        return view('posts.index', compact('categories', 'articles'));
+            $query = trim($request->input('q'));
+            
+            $articles = Post::where('status', 'PUBLISHED')
+                ->where('title', 'LIKE', '%'.$query.'%')
+                ->latest()
+                ->paginate(15);
+            
+
+            return view('posts.index', compact('categories', 'articles', 'search', 'query'));
+        }
+        else
+        {
+            $search = false;
+
+            $articles = Post::where('status', 'PUBLISHED')->latest()->paginate(15);
+        }        
+
+        return view('posts.index', compact('categories', 'articles', 'search'));
     }
 
     public function show($slug)

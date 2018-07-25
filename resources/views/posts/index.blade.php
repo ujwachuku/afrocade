@@ -13,60 +13,60 @@ Discover Africa's hidden art and musical gems from Afrocade's blog
 @endsection
 
 @section('content')
-<div class="content-wrapper">
+<div class="content-wrapper head-div">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 v-categories side-menu">
+            <div class="col-lg-12">
 
-                <!-- Articles -->
+                <!-- Featured Videos -->
                 <div class="content-block">
                     <div class="cb-header">
+                        @if($search)
                         <div class="row">
-                            <div class="col-lg-10">
+                            <div class="col-lg-12 col-xs-12">
                                 <ul class="list-inline">
-                                    <li><a href="#" class="color-active">Articles</a></li>
+                                    <li>
+                                        <b>Search Results: </b> 
+                                        <a href="#">{{ count($articles) }} {{ count($articles) > 1 || count($articles) == 0 ? 'articles' : 'article'}} found for search term "{{ $query }}"</a>
+                                    </li>
                                 </ul>
-                            </div>
+                            </div>                            
                         </div>
+                        @endif
                     </div>
-                    <div class="cb-content">
+                    <div class="single-video video-mobile-02">
                         <div class="row">
-                            <!-- <div class="col-md-2 col-sm-2 col-xs-2">
-                                <aside class="sidebar-menu">
-                                    <ul>
-                                    	@foreach($categories as $category)
-                                        <li><a href="#">{{ $category->name }}</a></li>
-                                        @endforeach
-                                    </ul>
-                                    <div class="bg-add"></div>
-                                </aside>
-                            </div> -->
-                            <div class="col-md-12 col-sm-12 col-xs-8">
-                                <div class="row">
-                                	@if(count($articles) > 0)
-                                	@foreach($articles as $article)
-                                    <!-- article -->
-                                    <div class="col-md-4 col-xs-6 col-sm-3">
-                                        <div class="b-category">
-                                            <a href="{{ route('articles.show', $article->slug) }}"><img src="/storage/{{ $article->image }}" alt="{{ $article->title }}" width="350px" height="350px"></a>
-                                            <a href="{{ route('articles.show', $article->slug) }}" class="name">{{ $article->title }}</a>
-                                            <p class="desc">{{ $article->created_at->diffForHumans() }}</p>
+                            @if(count($articles) > 0)
+                            @foreach($articles as $article)
+                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                <div class="h-video row">
+                                    <div class="col-sm-12 col-xs-6">
+                                        <div class="v-img">
+                                            <a href="{{ route('articles.show', $article->slug) }}">
+                                                <img src="{{  '/storage/'.$article->image }}" alt="{{ $article->title }}">
+                                            </a>
                                         </div>
                                     </div>
-                                    @endforeach
-                                    {{ $articles->links() }}
-                                    @else
-									<div class="alert alert-warning">
-										There are no articles at this time...
-									</div>
-                                    @endif                                    
+                                    <div class="col-sm-12 col-xs-6">
+                                        <div class="v-desc">
+                                            <a href="{{ route('articles.show', $article->slug) }}">{{ $article->title }}</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            @endforeach
+                            {{ $articles->links() }}
+                            @else
+                            <div class="col-md-12">
+                                <div class="alert alert-warning">
+                                    No articles found at this time...
+                                </div>
+                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>
-                <!-- /Articles -->
-
+                <!-- /Featured Videos -->
             </div>
         </div>
     </div>

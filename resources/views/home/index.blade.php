@@ -39,7 +39,7 @@ Bringing African music and art to the world
                             <div class="col-lg-3 col-sm-6 videoitem">
                                 <div class="b-video">
                                     <div class="v-img">
-                                        <a href="{{ route('articles.show', $article->slug) }}"><img src="{{  '/storage/'.$article->image }}" alt="{{  $article->title }}" width="350px" height="350px"></a> 
+                                        <a href="{{ route('articles.show', $article->slug) }}"><img src="{{  '/storage/'.$article->image }}" alt="{{ $article->title }}" width="350px" height="350px"></a> 
                                     </div>
                                     <div class="v-desc">
                                         <a href="{{ route('articles.show', $article->slug) }}">{{  $article->title }}</a>

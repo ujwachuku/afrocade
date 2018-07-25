@@ -22,12 +22,12 @@
                         </ul>
                     </div>
                     <div class="col-lg-6 col-sm-8 col-xs-3">
-                        <form action="" method="post">
+                        <form action="{{ route('articles.index') }}" method="get">
                             <div class="topsearch">
                                 <i class="cv cvicon-cv-cancel topsearch-close"></i>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i></span>
-                                    <input type="text" class="form-control" placeholder="Search" aria-describedby="sizing-addon2">
+                                    <input type="text" name="q" class="form-control" placeholder="Search" aria-describedby="sizing-addon2">
                                     <div class="input-group-btn">
                                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="cv cvicon-cv-file"></i>&nbsp;&nbsp;&nbsp;</button>                                        
                                     </div><!-- /btn-group -->
