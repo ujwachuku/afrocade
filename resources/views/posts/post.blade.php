@@ -18,11 +18,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9 col-xs-12 col-sm-12">
+                @if(!empty($article->video_url))
                 <div class="sv-video">
                     <div class="video-responsive">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9LgeDcu-oho" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="{!! $article->video_url !!}" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
+                @endif
                 <h1><a href="#">{{ $article->title }}</a></h1>
                 <div class="info">
                     <div class="custom-tabs">
@@ -40,11 +42,13 @@
                                 <div>
                                     {!! $article->body!!}
                                     <hr>
+                                    @if(!empty($article->audio_url))
                                     <h4>Audio Narration :</h4>
                                     <span>
-                                    	<iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/44525563&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                                    	<iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="{!! $article->audio_url !!}"></iframe>
                                     </span>
                                     <hr>
+                                    @endif
                                     <div class="row date-lic">
                                         <div class="col-xs-6">
                                             <h4>Posted:</h4>

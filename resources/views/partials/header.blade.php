@@ -36,21 +36,29 @@
                         </form>
                     </div>
                     <div class="col-lg-2 col-sm-4 hidden-xs">
-                        <div class="avatar pull-left">
+                        <!-- <div class="avatar pull-left">
                             @auth
-                            <img src="{{ '/storage/'.Auth::user()->avatar }}" alt="{{ Auth::user()->name }}" width="50px" height="50px" />
-                            <span class="status"></span>
+                            <img src="{{ '/storage/'.Auth::user()->avatar }}" alt="{{ Auth::user()->name }}" width="45px" height="45px" />
                             @endauth
-                        </div>
+                        </div> -->
                         <div class="selectuser pull-left">
                             <div class="btn-group pull-right dropdown">
                                 @auth
+                            <span class="status"></span>
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     {{ Auth::user()->name }}
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Logout</a></li>
+                                    <li>
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                      Log out
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
                                 </ul>
                                 @endauth
                                 @guest
