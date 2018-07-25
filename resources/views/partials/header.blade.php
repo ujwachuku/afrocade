@@ -15,10 +15,10 @@
                     </div>
                     <div class="col-lg-3 col-sm-10 hidden-xs">
                         <ul class="list-inline menu">
-                            <li class="color-active">
+                            <li class="{{ Route::currentRoutename() === 'home.index' ? 'color-active' : '' }}">
                                 <a href="/">Home</a>
                             </li>
-                            <li><a href="{{ route('articles.index') }}">Articles</a></li>
+                            <li class="{{ Route::currentRoutename() === 'articles.index' || Route::currentRoutename() === 'articles.show' ? 'color-active' : '' }}"><a href="{{ route('articles.index') }}">Articles</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-6 col-sm-8 col-xs-3">
@@ -35,12 +35,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-2 col-sm-4 hidden-xs">
-                        <!-- <div class="avatar pull-left">
-                            @auth
-                            <img src="{{ '/storage/'.Auth::user()->avatar }}" alt="{{ Auth::user()->name }}" width="45px" height="45px" />
-                            @endauth
-                        </div> -->
+                    <div class="col-lg-2 col-sm-4 hidden-xs">                        
                         <div class="selectuser pull-left">
                             <div class="btn-group pull-right dropdown">
                                 @auth
