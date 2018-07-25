@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-	
+Bringing African music and art to the world	
 @endsection
 
 @section('description')

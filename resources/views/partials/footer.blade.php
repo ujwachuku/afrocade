@@ -3,7 +3,7 @@
         <div class="row">
             <div class="container padding-def">
                 <div class="col-lg-1  col-sm-2 col-xs-12 footer-logo">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         <img src="/images/logo.png" alt="{{ config('app.name') }}" class="logo" />
                         <span>{{ config('app.name') }}</span>
                     </a>

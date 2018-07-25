@@ -8,7 +8,7 @@
                         <a href="#" class="btn-menu-toggle"><i class="cv cvicon-cv-menu"></i></a>
                     </div>
                     <div class="col-lg-1 col-sm-2 col-xs-6">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/">
                             <img src="/images/logo.png" alt="{{ config('app.name') }}" class="logo" />
                             <span>{{ config('app.name') }}</span>
                         </a>
