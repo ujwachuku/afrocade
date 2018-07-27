@@ -21,7 +21,7 @@
                 @if(!empty($article->video_url))
                 <div class="sv-video">
                     <div class="video-responsive">
-                        <iframe width="560" height="315" src="{!! $article->video_url !!}" frameborder="0" allowfullscreen></iframe>
+                        {!! $article->video_url !!}
                     </div>
                 </div>
                 @endif
@@ -45,7 +45,7 @@
                                     @if(!empty($article->audio_url))
                                     <h4>Audio Narration :</h4>
                                     <span>
-                                    	<iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="{!! $article->audio_url !!}"></iframe>
+                                    	{!! $article->audio_url !!}
                                     </span>
                                     <hr>
                                     @endif
