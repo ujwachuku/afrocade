@@ -13,6 +13,7 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         $categories = Category::orderBy('name', 'desc')->get();
+        $category = '';
 
         if ($request->has('q')) 
         {
@@ -26,7 +27,7 @@ class ArticleController extends Controller
                 ->paginate(15);
             
 
-            return view('posts.index', compact('categories', 'articles', 'search', 'query'));
+            return view('posts.index', compact('categories', 'articles', 'search', 'query', 'category'));
         }
         else
         {
@@ -35,7 +36,7 @@ class ArticleController extends Controller
             $articles = Post::where('status', 'PUBLISHED')->latest()->paginate(15);
         }        
 
-        return view('posts.index', compact('categories', 'articles', 'search'));
+        return view('posts.index', compact('categories', 'articles', 'search', 'category'));
     }
 
     public function show($slug)
