@@ -18,7 +18,7 @@
                             <li class="{{ Route::currentRoutename() === 'home.index' ? 'color-active' : '' }}">
                                 <a href="/">Home</a>
                             </li>
-                            <li class="{{ Route::currentRoutename() === 'articles.index' || Route::currentRoutename() === 'articles.show' ? 'color-active' : '' }}"><a href="{{ route('articles.index') }}">Articles</a></li>
+                            <li class="{{ Route::currentRoutename() === 'articles.index' || Route::currentRoutename() === 'articles.show' || Route::currentRoutename() === 'categories.articles' ? 'color-active' : '' }}"><a href="{{ route('articles.index') }}">Articles</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-6 col-sm-8 col-xs-3">

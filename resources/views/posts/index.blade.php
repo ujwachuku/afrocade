@@ -1,11 +1,19 @@
 @extends('layouts.master')
 
 @section('title')
-Afrocade Articles	
+    @if($category == '')
+        Afrocade Articles	
+    @else
+        Afrocade {{ ucfirst($category->name) }} Articles
+    @endif
 @endsection
 
 @section('description')
-Discover Africa's hidden art and musical gems from Afrocade's blog	
+    @if($category == '')
+        Discover Africa's hidden art and musical gems from Afrocade
+    @else
+        Discover Africa's hidden art and musical gems from Afrocade's {{ ucfirst($category->name) }} articles
+    @endif
 @endsection
 
 @section('styles')
@@ -21,6 +29,16 @@ Discover Africa's hidden art and musical gems from Afrocade's blog
                 <!-- Featured Videos -->
                 <div class="content-block">
                     <div class="cb-header">
+                        @if($category != '')
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 col-xs-12">
+                                <ul class="list-inline">
+                                    <li><a href="#" style="color: #F9490B !important;">{{ ucfirst($category->name) }} Articles</a></li>
+                                </ul>
+                            </div>
+                        </div>                        
+                        @endif
+                        
                         @if($search)
                         <div class="row">
                             <div class="col-lg-12 col-xs-12">
