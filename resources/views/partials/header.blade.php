@@ -13,7 +13,7 @@
                             <span>{{ config('app.name') }}</span>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-sm-10 hidden-xs">
+                    <div class="col-lg-3 col-sm-2 hidden-xs">
                         <ul class="list-inline menu">
                             <li class="{{ Route::currentRoutename() === 'home.index' ? 'color-active' : '' }}">
                                 <a href="/">Home</a>
@@ -21,7 +21,7 @@
                             <li class="{{ Route::currentRoutename() === 'articles.index' || Route::currentRoutename() === 'articles.show' || Route::currentRoutename() === 'categories.articles' ? 'color-active' : '' }}"><a href="{{ route('articles.index') }}">Articles</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-6 col-sm-8 col-xs-3">
+                    <div class="col-lg-6 col-sm-4 col-xs-3">
                         <form action="{{ route('articles.index') }}" method="get">
                             <div class="topsearch">
                                 <i class="cv cvicon-cv-cancel topsearch-close"></i>
