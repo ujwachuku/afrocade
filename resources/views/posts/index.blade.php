@@ -65,7 +65,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-xs-6">
+                                    <div class="col-sm-10 col-xs-6">
                                         <div class="v-desc">
                                             <a href="{{ route('articles.show', $article->slug) }}">{{ $article->title }}</a>
                                         </div>
