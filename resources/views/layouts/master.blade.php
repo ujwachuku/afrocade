@@ -38,6 +38,9 @@
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a2f1623523c4397"></script>
+
 @yield('scripts')
 </body>
 </html>
