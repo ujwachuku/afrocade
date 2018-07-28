@@ -96,7 +96,7 @@
                     <div class="h-video playlist row">
                         <div class="col-lg-5 col-sm-5 col-xs-6">
                             <div class="v-img">
-                                <a href="{{ route('articles.show', $upSell->slug) }}"><img src="{{ '/storage/'.$upSell->image }}" alt="{{ $upSell->title }}"></a>
+                                <a href="{{ route('articles.show', $upSell->slug) }}"><img src="{{ Voyager::image($upSell->thumbnail('cropped')) }}" alt="{{ $upSell->title }}"></a>
                             </div>
                         </div>
                         <div class="col-lg-7 col-sm-7 col-xs-6">
