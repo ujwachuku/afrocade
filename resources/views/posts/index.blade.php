@@ -61,7 +61,7 @@
                                     <div class="col-sm-12 col-xs-6">
                                         <div class="v-img">
                                             <a href="{{ route('articles.show', $article->slug) }}">
-                                                <img src="{{  '/storage/'.$article->image }}" alt="{{ $article->title }}">
+                                                <img src="{{ Voyager::image($article->thumbnail('cropped')) }}" alt="{{ $article->title }}">
                                             </a>
                                         </div>
                                     </div>

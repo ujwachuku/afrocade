@@ -7,6 +7,7 @@ use App\Category;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+// use TCG\Voyager;
 
 class ArticleController extends Controller
 {
@@ -44,6 +45,8 @@ class ArticleController extends Controller
         $article = Post::where('slug', $slug)
             ->where('status', 'published')
             ->first();
+
+            // dd(Voyager::image($article->thumbnail('cropped')));
 
         $upSells = Post::inRandomOrder()
             ->where('status', 'published')
