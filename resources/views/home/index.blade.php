@@ -65,9 +65,9 @@ Bringing African music and art to the world
                                                 <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob" onMouseover="afroHover.playclip()" onclick="afroClick.playclip()"><img src="{{ Voyager::image($article->thumbnail('cropped')) }}" alt="{{ $article->title }}"></a>
                                             </div>
                                         </div>
-                                        <div class="col-sm-9 col-xs-6">
+                                        <div class="col-sm-10 col-xs-6">
                                             <div class="v-desc">
-                                                <a href="{{ route('articles.show', $article->slug) }}">{{ $article->title }}</a>
+                                                <a href="{{ route('articles.show', $article->slug) }}" title="{{  $article->title }}">{{ substr($article->title, 0, 60) }}...</a>
                                             </div>
                                             <div class="v-views">
                                                 {{  $article->created_at->diffForHumans() }}
