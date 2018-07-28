@@ -32,7 +32,7 @@ Bringing African music and art to the world
                     <div class="cb-content avatars">
                         <div class="row">
                         	@foreach($categories as $category)
-                            <div class="col-lg-1 col-sm-2 col-xs-3"><a href="{{ route('categories.articles', $category->slug) }}"><img src="{{ $category->image == '/images/logo.png' ? '/images/logo.png' : Voyager::image($category->thumbnail('cropped')) }}" alt=""><div class="note">{{ $category->name }}</div></a></div>
+                            <div class="col-lg-1 col-sm-2 col-xs-3"><a href="{{ route('categories.articles', $category->slug) }}" class="hvr-grow"><img src="{{ $category->image == '/images/logo.png' ? '/images/logo.png' : Voyager::image($category->thumbnail('cropped')) }}" alt=""><div class="note">{{ $category->name }}</div></a></div>
                             @endforeach                            
                         </div>
                     </div>
