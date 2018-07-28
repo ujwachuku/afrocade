@@ -60,7 +60,7 @@
                                 <div class="h-video row">
                                     <div class="col-sm-12 col-xs-6">
                                         <div class="v-img">
-                                            <a href="{{ route('articles.show', $article->slug) }}">
+                                            <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob">
                                                 <img src="{{ Voyager::image($article->thumbnail('cropped')) }}" alt="{{ $article->title }}">
                                             </a>
                                         </div>

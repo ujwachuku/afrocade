@@ -4,7 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="@yield('description')">    
+    <meta name="description" content="
+    @if(Route::currentRouteName() != 'home.index') 
+        @yield('description') 
+    @else 
+    Afrocade seeks to bring African music and art to the world. Check out the latest African music and art here
+    @endif
+    ">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+    <meta property="og:url" content="{{ url(Route::current()->uri()) }}">
+    <meta property="og:description" content="
+    @if(Route::currentRouteName() != 'home.index') 
+        @yield('description') 
+    @else 
+    Afrocade seeks to bring African music and art to the world. Check out the latest African music and art here
+    @endif
+    ">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="">   
     <link rel="icon" href="favicon.png">
 
     <title>@yield('title') | AFROCADE</title>
@@ -16,7 +34,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-circle-video.css') }}" rel="stylesheet">
-
+    <link href="Https://cdn.bootcss.com/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
     <!-- font-family: 'Hind', sans-serif; -->
     <link href='https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700|Hind+Guntur:300,400,500,700' rel='stylesheet' type='text/css'>
     @yield('styles')
