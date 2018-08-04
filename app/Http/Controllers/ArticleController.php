@@ -13,7 +13,7 @@ class ArticleController extends Controller
 {
     public function index(Request $request)
     {
-        $categories = Category::orderBy('name', 'desc')->get();
+        $categories = Category::orderBy('order', 'desc')->get();
         $category = '';
 
         if ($request->has('q')) 
