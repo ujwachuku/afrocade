@@ -80,8 +80,7 @@
     <div class="mobile-menu-head">
         <a href="#" class="mobile-menu-close"></a>
         <a class="navbar-brand" href="index.html">
-            <img src="/images/logo.png" alt="{{ config('app.name') }}" class="logo" />
-            <span>{{ config('app.name') }}</span>
+            <img src="/images/logo.png" alt="{{ config('app.name') }}" class="logo" />            
         </a>
         <div class="mobile-menu-btn-color">
             <!-- <img src="/images/icon_bulb_light.png" alt=""> -->
