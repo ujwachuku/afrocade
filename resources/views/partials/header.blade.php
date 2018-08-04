@@ -10,7 +10,6 @@
                     <div class="col-lg-1 col-sm-2 col-xs-6">
                         <a class="navbar-brand" href="/">
                             <img src="/images/logo.png" alt="{{ config('app.name') }}" class="logo" />
-                            <span>{{ config('app.name') }}</span>
                         </a>
                     </div>
                     <div class="col-lg-3 col-sm-2 hidden-xs">

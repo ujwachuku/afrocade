@@ -66,8 +66,8 @@ var html5_audiotypes={
     "wav": "audio/wav"
 }
 
-var afroClick=createsoundbite("{{ asset('sounds/click.mp3') }}", "{{ asset('sounds/click.ogg') }}");
-var afroHover=createsoundbite("{{ asset('sounds/whistle.mp3') }}", "{{ asset('sounds/whistle.ogg') }}");
+var afroClick=createsoundbite("{{ asset('sounds/click.ogg') }}");
+var afroHover=createsoundbite("{{ asset('sounds/whoosh.mp3') }}");
 
 function createsoundbite(sound){
     var html5audio=document.createElement('audio')
