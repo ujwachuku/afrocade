@@ -23,7 +23,7 @@
     ">
     <meta property="og:type" content="article">
     <meta property="og:image" content="">   
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="/images/favicon.png">
 
     <title>@yield('title') | AFROCADE</title>
 

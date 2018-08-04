@@ -88,5 +88,5 @@ Bringing African music and art to the world
 @endsection
 
 @section('scripts')
-	
+
 @endsection
