@@ -14,7 +14,7 @@
     <meta property="article:author" content="@yield('author')">
     @endif
     <meta property="og:image" content="@yield('image')">
-    <meta property="fb:app_id" content="519680525139475" />
+    <meta property="fb:app_id" content="519680525139475">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@afrocade_">
     <meta name="twitter:title" content="@yield('title')">
