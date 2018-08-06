@@ -5,7 +5,11 @@ Bringing African music and art to the world
 @endsection
 
 @section('description')
-	
+Afrocade seeks to bring African music and art to the world. Check out the latest African music and art here	
+@endsection
+
+@section('image')
+{{ asset('/images/logo-white-big.jpg') }}
 @endsection
 
 @section('styles')

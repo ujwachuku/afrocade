@@ -4,25 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="
-    @if(Route::currentRouteName() != 'home.index') 
-        @yield('description') 
-    @else 
-    Afrocade seeks to bring African music and art to the world. Check out the latest African music and art here
-    @endif
-    ">
+    <meta name="description" content="@yield('description')">
     <meta property="og:title" content="@yield('title')">
     <meta property="og:site_name" content="{{ config('app.name') }}">
     <meta property="og:url" content="{{ url(Route::current()->uri()) }}">
-    <meta property="og:description" content="
-    @if(Route::currentRouteName() != 'home.index') 
-        @yield('description') 
-    @else 
-    Afrocade seeks to bring African music and art to the world. Check out the latest African music and art here
+    <meta property="og:description" content="@yield('description')">
+    <meta property="og:type" content="{{ Route::currentRouteName() == 'articles.show' ? 'article' : 'website' }}">
+    @if(Route::currentRouteName() == 'articles.show')
+    <meta property="article:author" content="@yield('author')">
     @endif
-    ">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="">   
+    <meta property="og:image" content="@yield('image')">
+    <meta property="fb:app_id" content="519680525139475" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@afrocade_">
+    <meta name="twitter:title" content="@yield('title')">
+    <meta name="twitter:description" content="@yield('description')">
+    <meta name="twitter:image" content="@yield('image')">
+    <meta name="twitter:image:alt" content="@yield('title')">
+   
     <link rel="icon" href="/images/favicon.png">
 
     <title>@yield('title') | AFROCADE</title>

@@ -8,6 +8,14 @@
 {{ $article->meta_description }}
 @endsection
 
+@section('image')
+{{ asset('/storage/'.$article->image) }}   
+@endsection
+
+@section('author')
+{{ $article->user->name }}    
+@endsection
+
 @section('styles')
  <link rel="stylesheet" href="{{ asset('js/vendor/player/johndyer-mediaelement-89793bc/build/mediaelementplayer.min.css') }}" />
 <link href="{{ asset('js/vendor/magnificPopup/dist/magnific-popup.css') }}" rel="stylesheet">	

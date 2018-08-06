@@ -16,6 +16,10 @@
     @endif
 @endsection
 
+@section('image')
+{{ asset('/images/logo-white-big.jpg') }}
+@endsection
+
 @section('styles')
 	
 @endsection
