@@ -60,7 +60,7 @@
                                     <div class="row date-lic">
                                         <div class="col-xs-6">
                                             <span class="pull-left">
-                                                <h4>Author:</h4>
+                                                <h4>Written by:</h4>
                                                 <p>{{ $article->user->name }}</p> 
                                             </span>
                                         </div>
@@ -77,14 +77,16 @@
                         <!-- END tabs-content -->
                     </div>                   
                     <div class="adblock2">
-                        <div class="img">
-                            <span class="hidden-xs">
-                                Google AdSense<br>728 x 90
-                            </span>
-                            <span class="visible-xs">
-                                Google AdSense 320 x 50
-                            </span>
-                        </div>
+                        <a href="https://www.when.sale/" title="When" target="_blank" rel="nofollow">
+                            <div class="img">
+                                <span class="hidden-xs">
+                                    <img src="/images/when-banner-1.jpg" alt="When">
+                                </span>
+                                <span class="visible-xs">
+                                    <img src="/images/when-banner-1.jpg" alt="When" width="320px" height="50px">
+                                </span>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-12">
                         <div id="disqus_thread"></div>                        
@@ -92,9 +94,11 @@
                 </div>
                 <div class="content-block head-div head-arrow visible-xs">
                     <div class="adblock2 adblock2-v2">
-                        <div class="img">
-                            <span>Google AdSense 300 x 250</span>
-                        </div>
+                        <a href="https://www.when.sale/" title="When" target="_blank" rel="nofollow">
+                            <div class="img">
+                                <img src="/images/when-banner-2.jpg" alt="When">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -132,16 +136,16 @@
                 <!-- END up next -->
 
                 <div class="adblock">
-                    <div class="img">
-                        Google AdSense<br>
-                        336 x 280
-                    </div>
+                    <a href="https://www.when.sale/" title="When" target="_blank" rel="nofollow">
+                        <div class="img">
+                            <img src="/images/when-banner-2.jpg" alt="When">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div id="fb-root"></div>	
+</div>	
 @endsection
 
 @section('scripts')

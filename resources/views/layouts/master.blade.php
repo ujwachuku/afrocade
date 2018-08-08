@@ -7,7 +7,7 @@
     <meta name="description" content="@yield('description')">
     <meta property="og:title" content="@yield('title')">
     <meta property="og:site_name" content="{{ config('app.name') }}">
-    <meta property="og:url" content="{{ url(Route::current()->uri()) }}">
+    <meta property="og:url" content="{{ URL::current() }}">
     <meta property="og:description" content="@yield('description')">
     <meta property="og:type" content="{{ Route::currentRouteName() == 'articles.show' ? 'article' : 'website' }}">
     @if(Route::currentRouteName() == 'articles.show')
