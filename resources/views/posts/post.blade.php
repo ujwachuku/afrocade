@@ -33,7 +33,8 @@
                     </div>
                 </div>
                 @endif
-                <h1><a href="#">{{ $article->title }}</a></h1>
+                <h1><a href="#">{{ $article->title }}</a></h1>                     
+                <p>{{ $article->user->name }}</p>
                 <div class="info">
                     <div class="custom-tabs">
                         <div class="tabs-panel">
@@ -59,15 +60,9 @@
                                     @endif
                                     <div class="row date-lic">
                                         <div class="col-xs-6">
-                                            <span class="pull-left">
-                                                <h4>Written by:</h4>
-                                                <p>{{ $article->user->name }}</p> 
-                                            </span>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <span class="pull-right">
+                                            <span>
                                                 <h4>Posted:</h4>
-                                                <p>{{ $article->created_at->diffForHumans() }}</p>
+                                                <p>{{ $article->created_at->toFormattedDateString() }}</p>
                                             </span>                                            
                                         </div>
                                     </div>
