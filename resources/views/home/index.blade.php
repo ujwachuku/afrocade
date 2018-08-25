@@ -43,6 +43,7 @@ Afrocade seeks to bring African music and art to the world. Check out the latest
                 </div>
                 <!-- /Featured Categories -->
                 @endif
+                @foreach($articles as $key => $value)
 				<div class="content-block head-div">
                     <div class="cb-header">
                         <div class="row">
@@ -50,8 +51,8 @@ Afrocade seeks to bring African music and art to the world. Check out the latest
                                 <ul class="list-inline">
                                     <li>
                                         <a href="#" class="color-active">
-                                            <span class="visible-xs">Featured</span>
-                                            <span class="hidden-xs">Featured Articles</span>
+                                            <span class="visible-xs">{{ $key }}</span>
+                                            <span class="hidden-xs">{{ $key }} Articles</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -61,7 +62,7 @@ Afrocade seeks to bring African music and art to the world. Check out the latest
                     <div class="cb-content videolist--off">
                         <div class="single-video video-mobile-02">
                             <div class="row">
-                            	@foreach($articles as $article)
+                            	@foreach($value as $article)
                                 <div class="col-lg-3 col-sm-6 col-xs-12">
                                     <div class="h-video row">
                                         <div class="col-sm-12 col-xs-6">
@@ -81,10 +82,12 @@ Afrocade seeks to bring African music and art to the world. Check out the latest
                                 </div>
                                 @endforeach
                             </div>
+                            <center><a href="{{ route('categories.articles', $article->category->slug) }}" class="btn btn-lg btn-info">More {{ $key }} Articles &rarr;</a></center>
                         </div>
                     </div>
                 </div>
                 <!-- /Featured Articles -->
+                @endforeach
             </div>
         </div>
     </div>
