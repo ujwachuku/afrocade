@@ -20,7 +20,7 @@ class PageController extends Controller
         foreach ($categories as $category) 
         {
         	// Go to db, count number of posts in category
-        	$articlesInCategory = $category->posts()->where('status', 'PUBLISHED')->take(4)->get();
+        	$articlesInCategory = $category->posts()->where('status', 'PUBLISHED')->latest()->take(4)->get();
 
         	if (count($articlesInCategory) >= 3) 
         	{
