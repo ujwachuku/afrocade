@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('title')
-Bringing African music and art to the world	
+Celebrating African excellence with the world	
 @endsection
 
 @section('description')
-Afrocade seeks to bring African music and art to the world. Check out the latest African music and art here	
+Afrocade was created to tell stories about African excellence and change the narrative about Africa and Africans.	
 @endsection
 
 @section('image')
