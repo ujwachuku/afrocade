@@ -57,7 +57,10 @@
                                     	{!! $article->audio_url !!}
                                     </span>
                                     <hr>
-                                    @endif
+                                    @endif                                    
+                                    
+                                    <div class="addthis_relatedposts_inline"></div>
+            
                                     <div class="row date-lic">
                                         <div class="col-xs-6">
                                             <span>
