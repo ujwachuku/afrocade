@@ -58,9 +58,9 @@
                                     </span>
                                     <hr>
                                     @endif                                    
-                                    
-                                    <div class="addthis_relatedposts_inline"></div>
-            
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="addthis_relatedposts_inline"></div>
+                                    </div>          
                                     <div class="row date-lic">
                                         <div class="col-xs-6">
                                             <span>
