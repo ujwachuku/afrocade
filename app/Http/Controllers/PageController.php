@@ -14,6 +14,12 @@ class PageController extends Controller
         // Set array variable to null
     	$articles = [];
 
+        // Get latest articles
+        $latestArticles = Post::where('status', 'PUBLISHED')
+            ->latest()
+            ->take(4)
+            ->get();
+
         // Get categories from db where there are at least three posts and group them for display on home page
         $categories = Category::orderBy('name', 'asc')->take(12)->get();
 
@@ -28,6 +34,6 @@ class PageController extends Controller
         	}
         }        
 
-        return view('home.index', compact('articles', 'categories'));
+        return view('home.index', compact('latestArticles','articles', 'categories'));
     }    
 }
