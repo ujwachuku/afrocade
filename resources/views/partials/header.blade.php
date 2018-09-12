@@ -79,7 +79,7 @@
 <div class="mobile-menu">
     <div class="mobile-menu-head">
         <a href="#" class="mobile-menu-close"></a>
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/">
             <img src="/images/logo.png" alt="{{ config('app.name') }}" class="logo" />            
         </a>
         <div class="mobile-menu-btn-color">
