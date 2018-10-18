@@ -21,7 +21,7 @@ class PageController extends Controller
             ->get();
 
         // Get categories from db where there are at least three posts and group them for display on home page
-        $categories = Category::orderBy('name', 'asc')->take(12)->get();
+        $categories = Category::orderBy('name', 'asc')->take(15)->get();
 
         foreach ($categories as $category) 
         {
