@@ -24,15 +24,6 @@ Afrocade was created to tell stories about African excellence and change the nar
                  @if(count($categories) > 0)
                 <!-- Featured Categories -->
                 <div class="content-block">
-                    <div class="cb-header">
-                        <div class="row">
-                            <div class="col-lg-12 col-sm-12 col-xs-12">
-                                <ul class="list-inline">
-                                    <li><a href="#" style="color: #F9490B !important;">Post Categories</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="cb-content avatars">
                         <div class="row">
                         	@foreach($categories as $category)
@@ -43,63 +34,9 @@ Afrocade was created to tell stories about African excellence and change the nar
                 </div>
                 <!-- /Featured Categories -->
                 @endif
-                <div class="content-block head-div">
-                    <div class="cb-header">
-                        <div class="row">
-                            <div class="col-lg-10 col-sm-10 col-xs-8">
-                                <ul class="list-inline">
-                                    <li>
-                                        <a href="#" class="color-active">
-                                            <span class="visible-xs">Latest</span>
-                                            <span class="hidden-xs">Latest Articles</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cb-content videolist--off">
-                        <div class="single-video video-mobile-02">
-                            <div class="row">
-                                @foreach($latestArticles as $latestArticle)
-                                <div class="col-lg-3 col-sm-6 col-xs-12">
-                                    <div class="h-video row">
-                                        <div class="col-sm-12 col-xs-6">
-                                            <div class="v-img">
-                                                <a href="{{ route('articles.show', $latestArticle->slug) }}" class="hvr-bob" onMouseover="afroHover.playclip()" onclick="afroClick.playclip()"><img src="{{ asset(Voyager::image($latestArticle->thumbnail('cropped'))) }}" alt="{{ $latestArticle->title }}"></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-10 col-xs-6">
-                                            <div class="v-desc">
-                                                <a href="{{ route('articles.show', $latestArticle->slug) }}" title="{{  $latestArticle->title }}">{{ substr($latestArticle->title, 0, 60) }}...</a>
-                                            </div>
-                                            <div class="v-views">
-                                                {{  $latestArticle->created_at->diffForHumans() }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
+                <div class="content-block head-div">                    
                 @foreach($articles as $key => $value)
 				<div class="content-block head-div">
-                    <div class="cb-header">
-                        <div class="row">
-                            <div class="col-lg-10 col-sm-10 col-xs-8">
-                                <ul class="list-inline">
-                                    <li>
-                                        <a href="#" class="color-active">
-                                            <span class="visible-xs">{{ $key }}</span>
-                                            <span class="hidden-xs">{{ $key }} Articles</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="cb-content videolist--off">
                         <div class="single-video video-mobile-02">
                             <div class="row">
