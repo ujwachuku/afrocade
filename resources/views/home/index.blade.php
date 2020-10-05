@@ -60,7 +60,6 @@ Afrocade was created to tell stories about African excellence and change the nar
                                 </div>
                                 @endforeach
                             </div>
-                            <center><a href="{{ route('categories.articles', $article->category->slug) }}" class="btn btn-lg btn-info">More {{ $key }} Articles &rarr;</a></center>
                         </div>
                     </div>
                 </div>
