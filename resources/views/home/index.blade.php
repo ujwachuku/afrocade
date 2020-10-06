@@ -27,7 +27,7 @@ Afrocade was created to tell stories about African excellence and change the nar
                     <div class="cb-content avatars">
                         <div class="row">
                         	@foreach($categories as $category)
-                            <div class="col-lg-1 col-sm-2 col-xs-3"><a href="{{ route('categories.articles', $category->slug) }}" class="hvr-grow" onMouseover="afroHover.playclip()" onclick="afroClick.playclip()"><img src="{{ $category->image == '/images/logo.png' ? '/images/logo.png' : asset(Voyager::image($category->thumbnail('cropped'))) }}" alt=""><div class="note">{{ $category->name }}</div></a></div>
+                            <div class="col-lg-1 col-sm-2 col-xs-3"><a href="{{ route('categories.articles', $category->slug) }}" class="hvr-grow"><img src="{{ $category->image == '/images/logo.png' ? '/images/logo.png' : asset(Voyager::image($category->thumbnail('cropped'))) }}" alt=""><div class="note">{{ $category->name }}</div></a></div>
                             @endforeach                            
                         </div>
                     </div>
@@ -41,7 +41,7 @@ Afrocade was created to tell stories about African excellence and change the nar
                         <div class="h-video row">
                             <div class="col-sm-12 col-xs-6">
                                 <div class="v-img">
-                                    <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob" onMouseover="afroHover.playclip()" onclick="afroClick.playclip()"><img src="{{ asset(Voyager::image($article->thumbnail('cropped'))) }}" alt="{{ $article->title }}"></a>
+                                    <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob"><img src="{{ asset(Voyager::image($article->thumbnail('cropped'))) }}" alt="{{ $article->title }}"></a>
                                 </div>
                             </div>
                             <div class="col-sm-10 col-xs-6">

@@ -4502,7 +4502,7 @@ ul.menu ul li:not(:last-child) {
 .single-video .h-video .v-desc {
     color: #343434;
     font-weight: 500;
-    padding-top: 0
+    padding-top: 8px;
 }
 
 .single-video .h-video .v-views {
