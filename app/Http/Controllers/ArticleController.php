@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Category;
-
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-// use TCG\Voyager;
 
 class ArticleController extends Controller
 {
@@ -25,7 +22,7 @@ class ArticleController extends Controller
             $articles = Post::where('status', 'PUBLISHED')
                 ->where('title', 'LIKE', '%'.$query.'%')
                 ->latest()
-                ->paginate(15);
+                ->paginate(12);
             
 
             return view('posts.index', compact('categories', 'articles', 'search', 'query', 'category'));
@@ -34,7 +31,7 @@ class ArticleController extends Controller
         {
             $search = false;
 
-            $articles = Post::where('status', 'PUBLISHED')->latest()->paginate(15);
+            $articles = Post::where('status', 'PUBLISHED')->latest()->paginate(12);
         }        
 
         return view('posts.index', compact('categories', 'articles', 'search', 'category'));
@@ -45,8 +42,6 @@ class ArticleController extends Controller
         $article = Post::where('slug', $slug)
             ->where('status', 'published')
             ->first();
-
-            // dd(Voyager::image($article->thumbnail('cropped')));
 
         $upSells = Post::inRandomOrder()
             ->where('status', 'published')
@@ -64,7 +59,7 @@ class ArticleController extends Controller
         $articles = Post::where('status', 'PUBLISHED')
             ->where('category_id', $category->id)
             ->latest()
-            ->paginate(15);
+            ->paginate(12);
 
         $search = false;     
 

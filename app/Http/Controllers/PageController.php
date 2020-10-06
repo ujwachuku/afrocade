@@ -11,7 +11,7 @@ class PageController extends Controller
 {
     public function index()
     {
-        $articles = Post::where('status', 'PUBLISHED')->latest()->paginate(16);
+        $articles = Post::where('status', 'PUBLISHED')->latest()->paginate(12);
 
         $categories = Category::orderBy('name', 'asc')->take(15)->get();
 
