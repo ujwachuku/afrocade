@@ -34,29 +34,38 @@ Afrocade was created to tell stories about African excellence and change the nar
                 </div>
                 <!-- /Featured Categories -->
                 @endif
-                <div class="content-block head-div">
-                @foreach($articles->chunk(4) as $articleChunk)
-                    @foreach($articleChunk as $article)
-                    <div class="col-lg-3 col-sm-6 col-xs-12">
-                        <div class="h-video row">
-                            <div class="col-sm-12 col-xs-6">
-                                <div class="v-img">
-                                    <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob"><img src="{{ asset(Voyager::image($article->thumbnail('cropped'))) }}" alt="{{ $article->title }}"></a>
+                @if(count($articles))
+                    <div class="content-block head-div">
+                    @foreach($articles->chunk(4) as $articleChunk)
+                        @foreach($articleChunk as $article)
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                            <div class="h-video row">
+                                <div class="col-sm-12 col-xs-6">
+                                    <div class="v-img">
+                                        <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob"><img src="{{ asset(Voyager::image($article->thumbnail('cropped'))) }}" alt="{{ $article->title }}"></a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12 col-xs-6">
-                                <div class="v-desc">
-                                    <a href="{{ route('articles.show', $article->slug) }}" title="{{  $article->title }}">{{ substr($article->title, 0, 60) }}...</a>
-                                </div>
-                                <div class="v-views">
-                                    {{  $article->created_at->diffForHumans() }}
+                                <div class="col-sm-12 col-xs-6">
+                                    <div class="v-desc">
+                                        <a href="{{ route('articles.show', $article->slug) }}" title="{{  $article->title }}">{{ substr($article->title, 0, 60) }}...</a>
+                                    </div>
+                                    <div class="v-views">
+                                        {{  $article->created_at->diffForHumans() }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        @endforeach
                     @endforeach
-                @endforeach
-                <!-- /Featured Articles -->
+                    {{ $articles->links() }}
+                    <!-- /Featured Articles -->
+                @else
+                <div class="col-md-12">
+                    <div class="alert alert-warning">
+                        No articles found at this time...
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
     </div>
