@@ -37,9 +37,9 @@ Afrocade was created to tell stories about African excellence and change the nar
                 @if(count($articles))
                 <div class="infinite-scroll">
                     <div class="content-block head-div">
-                    @foreach($articles->chunk(4) as $articleChunk)
+                    @foreach($articles->chunk(3) as $articleChunk)
                         @foreach($articleChunk as $article)
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
                             <div class="h-video row">
                                 <div class="col-sm-12 col-xs-6">
                                     <div class="v-img">
