@@ -37,7 +37,10 @@
                         <div class="row">
                             <div class="col-lg-12 col-sm-12 col-xs-12">
                                 <ul class="list-inline">
-                                    <li><a href="#" style="color: #F9490B !important;">{{ ucfirst($category->name) }}</a></li>
+                                    <li>
+                                        <a href="#" style="color: #F9490B !important;">{{ ucfirst($category->name) }}</a>
+                                        <a href="{{ route('home.index') }}" style="color: #F9490B !important;" class="pull-right">&larr; Back</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>                        
