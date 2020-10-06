@@ -37,7 +37,7 @@
                         <div class="row">
                             <div class="col-lg-12 col-sm-12 col-xs-12">
                                 <ul class="list-inline">
-                                    <li><a href="#" style="color: #F9490B !important;">{{ ucfirst($category->name) }} Articles</a></li>
+                                    <li><a href="#" style="color: #F9490B !important;">{{ ucfirst($category->name) }}</a></li>
                                 </ul>
                             </div>
                         </div>                        
