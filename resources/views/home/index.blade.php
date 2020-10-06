@@ -44,7 +44,7 @@ Afrocade was created to tell stories about African excellence and change the nar
                                     <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob"><img src="{{ asset(Voyager::image($article->thumbnail('cropped'))) }}" alt="{{ $article->title }}"></a>
                                 </div>
                             </div>
-                            <div class="col-sm-10 col-xs-6">
+                            <div class="col-sm-12 col-xs-6">
                                 <div class="v-desc">
                                     <a href="{{ route('articles.show', $article->slug) }}" title="{{  $article->title }}">{{ substr($article->title, 0, 60) }}...</a>
                                 </div>
