@@ -56,50 +56,21 @@
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b6c9345574188ce"></script>
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1054764,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-<script>
-var html5_audiotypes={
-    "mp3": "audio/mpeg",
-    "mp4": "audio/mp4",
-    "ogg": "audio/ogg",
-    "wav": "audio/wav"
-}
-
-var afroClick=createsoundbite("{{ asset('sounds/click.ogg') }}");
-var afroHover=createsoundbite("{{ asset('sounds/whoosh.mp3') }}");
-
-function createsoundbite(sound){
-    var html5audio=document.createElement('audio')
-    if (html5audio.canPlayType){ //check support for HTML5 audio
-        for (var i=0; i<arguments.length; i++){
-            var sourceel=document.createElement('source')
-            sourceel.setAttribute('src', arguments[i])
-            if (arguments[i].match(/\.(\w+)$/i))
-                sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
-            html5audio.appendChild(sourceel)
+<script src="/js/jscroll.js"></script>
+<script type="text/javascript">
+    $('ul.pagination').hide();
+    $(function() {
+    $('.infinite-scroll').jscroll({
+        autoTrigger: true,
+        loadingHtml: `<center><p class="text-primary"><i class="fa fa-circle-o-notch fa-2x fa-spin"></i></p></center>`,
+        padding: 5,
+        nextSelector: '.pagination li.active + li a',
+        contentSelector: 'div.infinite-scroll',
+        callback: function() {
+        $('ul.pagination').remove();
         }
-        html5audio.load()
-        html5audio.playclip=function(){
-            html5audio.pause()
-            html5audio.currentTime=0
-            html5audio.play()
-        }
-        return html5audio
-    }
-    else{
-        return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
-    }
-}
-
+    });            
+    });
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123389558-1"></script>
