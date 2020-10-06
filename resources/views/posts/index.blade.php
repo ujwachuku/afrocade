@@ -59,25 +59,27 @@
                     <div class="single-video video-mobile-02">
                         <div class="row">
                             @if(count($articles) > 0)
-                            @foreach($articles as $article)
-                            <div class="col-lg-3 col-sm-6 col-xs-12">
-                                <div class="h-video row">
-                                    <div class="col-sm-12 col-xs-6">
-                                        <div class="v-img">
-                                            <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob" onMouseover="afroHover.playclip()" onclick="afroClick.playclip()">
-                                                <img src="{{ asset(Voyager::image($article->thumbnail('cropped'))) }}" alt="{{ $article->title }}">
-                                            </a>
+                            <div class="infinite-scroll">
+                                @foreach($articles as $article)
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <div class="h-video row">
+                                        <div class="col-sm-12 col-xs-6">
+                                            <div class="v-img">
+                                                <a href="{{ route('articles.show', $article->slug) }}" class="hvr-bob" onMouseover="afroHover.playclip()" onclick="afroClick.playclip()">
+                                                    <img src="{{ asset(Voyager::image($article->thumbnail('cropped'))) }}" alt="{{ $article->title }}">
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-10 col-xs-6">
-                                        <div class="v-desc">
-                                            <a href="{{ route('articles.show', $article->slug) }}" title="{{  $article->title }}">{{ substr($article->title, 0, 60) }}...</a>
+                                        <div class="col-sm-10 col-xs-6">
+                                            <div class="v-desc">
+                                                <a href="{{ route('articles.show', $article->slug) }}" title="{{  $article->title }}">{{ substr($article->title, 0, 60) }}...</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
+                                {{ $articles->links() }}
                             </div>
-                            @endforeach
-                            {{ $articles->links() }}
                             @else
                             <div class="col-md-12">
                                 <div class="alert alert-warning">
