@@ -40,7 +40,9 @@
                                     <li>
                                         <a href="#" style="color: #F9490B !important;">{{ ucfirst($category->name) }}</a>
                                         <br>
-                                        <a href="{{ route('home.index') }}" style="color: #F9490B !important;" class="float-right"><i class="fa fa-arrow-left"></i> Back</a>
+                                        <small>
+                                            <a href="{{ route('home.index') }}" style="color: #F9490B !important;" class="float-right"><i class="fa fa-arrow-left"></i> Back</a>
+                                        </small>                                        
                                     </li>
                                 </ul>
                             </div>
